@@ -1,0 +1,47 @@
+[
+	{
+		"file": "D:\\\\GamesDevelopement\\\\UE_Multiplayer\\\\PuzzlePlatforms\\\\Source\\\\PuzzlePlatforms\\\\MovingPlatform.cpp",
+		"command": "cl.exe @\"D:\\GamesDevelopement\\UE_Multiplayer\\PuzzlePlatforms\\.vscode\\compileCommands_PuzzlePlatforms\\PuzzlePlatforms.196.rsp\"",
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.0EA\\Engine\\Source"
+	},
+	{
+		"file": "D:\\\\GamesDevelopement\\\\UE_Multiplayer\\\\PuzzlePlatforms\\\\Source\\\\PuzzlePlatforms\\\\MovingPlatform.h",
+		"command": "cl.exe @\"D:\\GamesDevelopement\\UE_Multiplayer\\PuzzlePlatforms\\.vscode\\compileCommands_PuzzlePlatforms\\PuzzlePlatforms.196.rsp\"",
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.0EA\\Engine\\Source"
+	},
+	{
+		"file": "D:\\\\GamesDevelopement\\\\UE_Multiplayer\\\\PuzzlePlatforms\\\\Source\\\\PuzzlePlatforms\\\\PuzzlePlatforms.Build.cs",
+		"command": "cl.exe @\"D:\\GamesDevelopement\\UE_Multiplayer\\PuzzlePlatforms\\.vscode\\compileCommands_PuzzlePlatforms\\PuzzlePlatforms.196.rsp\"",
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.0EA\\Engine\\Source"
+	},
+	{
+		"file": "D:\\\\GamesDevelopement\\\\UE_Multiplayer\\\\PuzzlePlatforms\\\\Source\\\\PuzzlePlatforms\\\\PuzzlePlatforms.cpp",
+		"command": "cl.exe @\"D:\\GamesDevelopement\\UE_Multiplayer\\PuzzlePlatforms\\.vscode\\compileCommands_PuzzlePlatforms\\PuzzlePlatforms.196.rsp\"",
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.0EA\\Engine\\Source"
+	},
+	{
+		"file": "D:\\\\GamesDevelopement\\\\UE_Multiplayer\\\\PuzzlePlatforms\\\\Source\\\\PuzzlePlatforms\\\\PuzzlePlatforms.h",
+		"command": "cl.exe @\"D:\\GamesDevelopement\\UE_Multiplayer\\PuzzlePlatforms\\.vscode\\compileCommands_PuzzlePlatforms\\PuzzlePlatforms.196.rsp\"",
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.0EA\\Engine\\Source"
+	},
+	{
+		"file": "D:\\\\GamesDevelopement\\\\UE_Multiplayer\\\\PuzzlePlatforms\\\\Source\\\\PuzzlePlatforms\\\\PuzzlePlatformsCharacter.cpp",
+		"command": "cl.exe @\"D:\\GamesDevelopement\\UE_Multiplayer\\PuzzlePlatforms\\.vscode\\compileCommands_PuzzlePlatforms\\PuzzlePlatforms.196.rsp\"",
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.0EA\\Engine\\Source"
+	},
+	{
+		"file": "D:\\\\GamesDevelopement\\\\UE_Multiplayer\\\\PuzzlePlatforms\\\\Source\\\\PuzzlePlatforms\\\\PuzzlePlatformsCharacter.h",
+		"command": "cl.exe @\"D:\\GamesDevelopement\\UE_Multiplayer\\PuzzlePlatforms\\.vscode\\compileCommands_PuzzlePlatforms\\PuzzlePlatforms.196.rsp\"",
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.0EA\\Engine\\Source"
+	},
+	{
+		"file": "D:\\\\GamesDevelopement\\\\UE_Multiplayer\\\\PuzzlePlatforms\\\\Source\\\\PuzzlePlatforms\\\\PuzzlePlatformsGameMode.cpp",
+		"command": "cl.exe @\"D:\\GamesDevelopement\\UE_Multiplayer\\PuzzlePlatforms\\.vscode\\compileCommands_PuzzlePlatforms\\PuzzlePlatforms.196.rsp\"",
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.0EA\\Engine\\Source"
+	},
+	{
+		"file": "D:\\\\GamesDevelopement\\\\UE_Multiplayer\\\\PuzzlePlatforms\\\\Source\\\\PuzzlePlatforms\\\\PuzzlePlatformsGameMode.h",
+		"command": "cl.exe @\"D:\\GamesDevelopement\\UE_Multiplayer\\PuzzlePlatforms\\.vscode\\compileCommands_PuzzlePlatforms\\PuzzlePlatforms.196.rsp\"",
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.0EA\\Engine\\Source"
+	}
+]

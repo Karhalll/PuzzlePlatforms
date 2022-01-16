@@ -1,0 +1,128 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "PuzzlePlatforms (Debug)",
+			"request": "launch",
+			"preLaunchTask": "PuzzlePlatforms Win64 Debug Build",
+			"program": "D:\\GamesDevelopement\\UE_Multiplayer\\PuzzlePlatforms\\Binaries\\Win64\\UnrealGame-Win64-Debug.exe",
+			"args": [
+			],
+			"cwd": "D:\\Program Files\\Epic Games\\UE_5.0EA",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "D:\\Program Files\\Epic Games\\UE_5.0EA\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis"
+		},
+		{
+			"name": "PuzzlePlatforms (DebugGame)",
+			"request": "launch",
+			"preLaunchTask": "PuzzlePlatforms Win64 DebugGame Build",
+			"program": "D:\\GamesDevelopement\\UE_Multiplayer\\PuzzlePlatforms\\Binaries\\Win64\\UnrealGame-Win64-DebugGame.exe",
+			"args": [
+			],
+			"cwd": "D:\\Program Files\\Epic Games\\UE_5.0EA",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "D:\\Program Files\\Epic Games\\UE_5.0EA\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis"
+		},
+		{
+			"name": "PuzzlePlatforms (Development)",
+			"request": "launch",
+			"preLaunchTask": "PuzzlePlatforms Win64 Development Build",
+			"program": "D:\\GamesDevelopement\\UE_Multiplayer\\PuzzlePlatforms\\Binaries\\Win64\\UnrealGame.exe",
+			"args": [
+			],
+			"cwd": "D:\\Program Files\\Epic Games\\UE_5.0EA",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "D:\\Program Files\\Epic Games\\UE_5.0EA\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis"
+		},
+		{
+			"name": "PuzzlePlatforms (Shipping)",
+			"request": "launch",
+			"preLaunchTask": "PuzzlePlatforms Win64 Shipping Build",
+			"program": "D:\\GamesDevelopement\\UE_Multiplayer\\PuzzlePlatforms\\Binaries\\Win64\\UnrealGame-Win64-Shipping.exe",
+			"args": [
+			],
+			"cwd": "D:\\Program Files\\Epic Games\\UE_5.0EA",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "D:\\Program Files\\Epic Games\\UE_5.0EA\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis"
+		},
+		{
+			"name": "PuzzlePlatforms (Test)",
+			"request": "launch",
+			"preLaunchTask": "PuzzlePlatforms Win64 Test Build",
+			"program": "D:\\GamesDevelopement\\UE_Multiplayer\\PuzzlePlatforms\\Binaries\\Win64\\UnrealGame-Win64-Test.exe",
+			"args": [
+			],
+			"cwd": "D:\\Program Files\\Epic Games\\UE_5.0EA",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "D:\\Program Files\\Epic Games\\UE_5.0EA\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis"
+		},
+		{
+			"name": "PuzzlePlatformsEditor (Debug)",
+			"request": "launch",
+			"preLaunchTask": "PuzzlePlatformsEditor Win64 Debug Build",
+			"program": "D:\\Program Files\\Epic Games\\UE_5.0EA\\Engine\\Binaries\\Win64\\UnrealEditor-Win64-Debug.exe",
+			"args": [
+				"D:\\GamesDevelopement\\UE_Multiplayer\\PuzzlePlatforms\\PuzzlePlatforms.uproject"
+			],
+			"cwd": "D:\\Program Files\\Epic Games\\UE_5.0EA",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "D:\\Program Files\\Epic Games\\UE_5.0EA\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis"
+		},
+		{
+			"name": "PuzzlePlatformsEditor (DebugGame)",
+			"request": "launch",
+			"preLaunchTask": "PuzzlePlatformsEditor Win64 DebugGame Build",
+			"program": "D:\\Program Files\\Epic Games\\UE_5.0EA\\Engine\\Binaries\\Win64\\UnrealEditor-Win64-DebugGame.exe",
+			"args": [
+				"D:\\GamesDevelopement\\UE_Multiplayer\\PuzzlePlatforms\\PuzzlePlatforms.uproject"
+			],
+			"cwd": "D:\\Program Files\\Epic Games\\UE_5.0EA",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "D:\\Program Files\\Epic Games\\UE_5.0EA\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis"
+		},
+		{
+			"name": "PuzzlePlatformsEditor (Development)",
+			"request": "launch",
+			"preLaunchTask": "PuzzlePlatformsEditor Win64 Development Build",
+			"program": "D:\\Program Files\\Epic Games\\UE_5.0EA\\Engine\\Binaries\\Win64\\UnrealEditor.exe",
+			"args": [
+				"D:\\GamesDevelopement\\UE_Multiplayer\\PuzzlePlatforms\\PuzzlePlatforms.uproject"
+			],
+			"cwd": "D:\\Program Files\\Epic Games\\UE_5.0EA",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "D:\\Program Files\\Epic Games\\UE_5.0EA\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis"
+		},
+		{
+			"name": "Generate Project Files",
+			"type": "coreclr",
+			"request": "launch",
+			"program": "D:\\Program Files\\Epic Games\\UE_5.0EA\\Engine\\Binaries\\DotNET\\UnrealBuildTool\\UnrealBuildTool",
+			"args": [
+				"-projectfiles",
+				"-vscode",
+				"-project=\"D:\\GamesDevelopement\\UE_Multiplayer\\PuzzlePlatforms\\PuzzlePlatforms.uproject\"",
+				"-game",
+				"-engine"
+			],
+			"console": "externalTerminal",
+			"stopAtEntry": false,
+			"cwd": "D:\\Program Files\\Epic Games\\UE_5.0EA"
+		}
+	]
+}
