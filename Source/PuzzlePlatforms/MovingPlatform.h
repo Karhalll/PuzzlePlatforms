@@ -22,6 +22,7 @@ public:
     AMovingPlatform();
 
 protected:
+    virtual void BeginPlay() override;
     virtual void Tick(float DeltaSeconds) override;
 
 };
