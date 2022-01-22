@@ -10,6 +10,16 @@
 		"directory": "D:\\Program Files\\Epic Games\\UE_5.0EA\\Engine\\Source"
 	},
 	{
+		"file": "D:\\\\GamesDevelopement\\\\UE_Multiplayer\\\\PuzzlePlatforms\\\\Source\\\\PuzzlePlatforms\\\\PlatformTrigger.cpp",
+		"command": "cl.exe @\"D:\\GamesDevelopement\\UE_Multiplayer\\PuzzlePlatforms\\.vscode\\compileCommands_PuzzlePlatforms\\PuzzlePlatforms.196.rsp\"",
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.0EA\\Engine\\Source"
+	},
+	{
+		"file": "D:\\\\GamesDevelopement\\\\UE_Multiplayer\\\\PuzzlePlatforms\\\\Source\\\\PuzzlePlatforms\\\\PlatformTrigger.h",
+		"command": "cl.exe @\"D:\\GamesDevelopement\\UE_Multiplayer\\PuzzlePlatforms\\.vscode\\compileCommands_PuzzlePlatforms\\PuzzlePlatforms.196.rsp\"",
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.0EA\\Engine\\Source"
+	},
+	{
 		"file": "D:\\\\GamesDevelopement\\\\UE_Multiplayer\\\\PuzzlePlatforms\\\\Source\\\\PuzzlePlatforms\\\\PuzzlePlatforms.Build.cs",
 		"command": "cl.exe @\"D:\\GamesDevelopement\\UE_Multiplayer\\PuzzlePlatforms\\.vscode\\compileCommands_PuzzlePlatforms\\PuzzlePlatforms.196.rsp\"",
 		"directory": "D:\\Program Files\\Epic Games\\UE_5.0EA\\Engine\\Source"
