@@ -24,8 +24,12 @@ void APlatformTrigger::BeginPlay()
 {
 	Super::BeginPlay();
 
-    TriggerVolume->OnComponentBeginOverlap.AddDynamic(this, &APlatformTrigger::OnOverlapBegin);
-    TriggerVolume->OnComponentEndOverlap.AddDynamic(this, &APlatformTrigger::OnOverlapEnd);
+    if (HasAuthority())
+    {
+        TriggerVolume->OnComponentBeginOverlap.AddDynamic(this, &APlatformTrigger::OnOverlapBegin);
+        TriggerVolume->OnComponentEndOverlap.AddDynamic(this, &APlatformTrigger::OnOverlapEnd);
+    }
+
 }
 
 // Called every frame
@@ -35,7 +39,8 @@ void APlatformTrigger::Tick(float DeltaTime)
 
 }
 
-void APlatformTrigger::OnOverlapBegin(UPrimitiveComponent *OverlappedComp, AActor *OtherActor, UPrimitiveComponent *OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult &SweepResult)
+void APlatformTrigger::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor,
+    UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult &SweepResult)
 {
     for (AMovingPlatform* Platform : PlatformsToTrigger)
     {
@@ -43,7 +48,8 @@ void APlatformTrigger::OnOverlapBegin(UPrimitiveComponent *OverlappedComp, AActo
     }
 }
 
-void APlatformTrigger::OnOverlapEnd(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
+void APlatformTrigger::OnOverlapEnd(UPrimitiveComponent* OverlappedComp, AActor* OtherActor,
+    UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
 {
     for (AMovingPlatform *Platform : PlatformsToTrigger)
     {
