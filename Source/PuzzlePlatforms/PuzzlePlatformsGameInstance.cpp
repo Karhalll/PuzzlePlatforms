@@ -18,6 +18,15 @@ void UPuzzlePlatformsGameInstance::Init()
 	UE_LOG(LogTemp, Warning, TEXT("Found class: %s"), *MenuClass->GetName());
 }
 
+void UPuzzlePlatformsGameInstance::LoadMenu()
+{
+	if(!MenuClass) { return; }
+	UUserWidget* Menu = CreateWidget<UUserWidget>(this, MenuClass);
+	if(!Menu) { return; }
+
+	Menu->AddToViewport();
+}
+
 void UPuzzlePlatformsGameInstance::Host()
 {
 	UEngine* Engine = GetEngine();
