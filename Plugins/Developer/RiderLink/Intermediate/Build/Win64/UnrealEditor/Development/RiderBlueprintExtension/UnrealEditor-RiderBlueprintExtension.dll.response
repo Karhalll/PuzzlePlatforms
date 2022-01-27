@@ -34,6 +34,7 @@
 /NODEFAULTLIB:"LIBCPD"
 /FUNCTIONPADMIN
 "D:\GamesDevelopement\UE_Multiplayer\PuzzlePlatforms\Plugins\Developer\RiderLink\Intermediate\Build\Win64\UnrealEditor\Development\RiderBlueprintExtension\Module.RiderBlueprintExtension.cpp.obj"
+"D:\GamesDevelopement\UE_Multiplayer\PuzzlePlatforms\Plugins\Developer\RiderLink\Intermediate\Build\Win64\UnrealEditor\Development\RiderBlueprintExtension\RiderBlueprintExtension.cpp.obj"
 "D:\GamesDevelopement\UE_Multiplayer\PuzzlePlatforms\Plugins\Developer\RiderLink\Intermediate\Build\Win64\UnrealEditor\Development\RiderBlueprintExtension\Default.rc2.res"
 "D:\Program Files\Epic Games\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Development\Core\UnrealEditor-Core.lib"
 "D:\Program Files\Epic Games\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Development\SlateCore\UnrealEditor-SlateCore.lib"
