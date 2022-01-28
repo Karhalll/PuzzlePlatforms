@@ -28,8 +28,6 @@ void UMenuWidget::Setup()
 
 void UMenuWidget::Teardown()
 {
-	UE_LOG(LogTemp, Warning, TEXT("Teardown called"));
-	
 	this->RemoveFromViewport();
 	
 	UWorld* World = GetWorld();
@@ -42,7 +40,5 @@ void UMenuWidget::Teardown()
 	PlayerController->SetInputMode(InputModeData);
 	
 	PlayerController->bShowMouseCursor = false;
-
-	UE_LOG(LogTemp, Warning, TEXT("Teardown ended"));
 }
 
