@@ -7,7 +7,7 @@
 
 bool UMainMenu::Initialize()
 {
-	bool Success = Super::Initialize();
+	const bool Success = Super::Initialize();
 	if (!Success) return false;
 
 	if (!Host) return false;
@@ -16,7 +16,15 @@ bool UMainMenu::Initialize()
 	return true;
 }
 
+void UMainMenu::SetMenuInterface(IMenuInterface* MMenuInterface)
+{
+	this->MenuInterface = MMenuInterface;
+}
+
 void UMainMenu::HostServer()
 {
-	UE_LOG(LogTemp, Warning, TEXT("I'm gonna host a server!"));
+	if (MenuInterface != nullptr)
+	{
+		MenuInterface->Host();
+	}
 }
