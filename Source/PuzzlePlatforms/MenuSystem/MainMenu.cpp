@@ -3,3 +3,20 @@
 
 #include "MainMenu.h"
 
+#include "Components/Button.h"
+
+bool UMainMenu::Initialize()
+{
+	bool Success = Super::Initialize();
+	if (!Success) return false;
+
+	if (!Host) return false;
+	Host->OnClicked.AddDynamic(this, &UMainMenu::HostServer);
+	
+	return true;
+}
+
+void UMainMenu::HostServer()
+{
+	UE_LOG(LogTemp, Warning, TEXT("I'm gonna host a server!"));
+}
