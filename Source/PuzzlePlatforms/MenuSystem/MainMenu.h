@@ -15,36 +15,41 @@ class PUZZLEPLATFORMS_API UMainMenu : public UMenuWidget
 {
 	GENERATED_BODY()
 
+public:
+	UMainMenu(const FObjectInitializer& ObjectInitializer);
+
 protected:
 	virtual bool Initialize() override;
 
 private:
+	TSubclassOf<UUserWidget> ServerRowClass;
+	
 	UPROPERTY(meta = (BindWidget))
 	class UButton* HostButton;
 
 	UPROPERTY(meta = (BindWidget))
-	class UButton* JoinMenuButton;
+	UButton* JoinMenuButton;
 
 	UPROPERTY(meta = (BindWidget))
-	class UButton* QuitGame;
+	UButton* QuitGame;
 
 	UPROPERTY(meta = (BindWidget))
-	class UButton* JoinButton;
+	UButton* JoinButton;
 
 	UPROPERTY(meta = (BindWidget))
-	class UButton* BackButton;
+	UButton* BackButton;
 
 	UPROPERTY(meta = (BindWidget))
 	class UWidgetSwitcher* MenuSwitcher;
 
 	UPROPERTY(meta = (BindWidget))
-	class UWidget* MainMenu;
+	UWidget* MainMenu;
 
 	UPROPERTY(meta = (BindWidget))
-	class UWidget* JoinMenu;
+	UWidget* JoinMenu;
 	
 	UPROPERTY(meta = (BindWidget))
-	class UEditableTextBox* IPAddressField;
+	UPanelWidget* ServerList;
 	
 
 	UFUNCTION()
