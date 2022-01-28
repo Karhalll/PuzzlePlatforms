@@ -30,12 +30,9 @@ void UPuzzlePlatformsGameInstance::LoadMenu()
 }
 
 void UPuzzlePlatformsGameInstance::Host()
-{
-	UE_LOG(LogTemp, Warning, TEXT("Host called"));
-	
+{	
 	if (Menu != nullptr)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Teardown() in Host() called"));
 		Menu->Teardown();
 	}
 	
@@ -52,6 +49,11 @@ void UPuzzlePlatformsGameInstance::Host()
 
 void UPuzzlePlatformsGameInstance::Join(const FString& Address)
 {
+	if (Menu != nullptr)
+	{
+		Menu->Teardown();
+	}
+	
 	UEngine* Engine = GetEngine();
 	if(!ensure(Engine != nullptr)) return;
 

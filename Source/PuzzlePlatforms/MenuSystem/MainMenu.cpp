@@ -4,6 +4,7 @@
 #include "MainMenu.h"
 
 #include "Components/Button.h"
+#include "Components/EditableTextBox.h"
 #include "Components/WidgetSwitcher.h"
 
 bool UMainMenu::Initialize()
@@ -13,8 +14,10 @@ bool UMainMenu::Initialize()
 
 	if (!HostButton) return false;
 	HostButton->OnClicked.AddDynamic(this, &UMainMenu::HostServer);
+	if (!JoinMenuButton) return false;
+	JoinMenuButton->OnClicked.AddDynamic(this, &UMainMenu::OpenJoinMenu);
 	if (!JoinButton) return false;
-	JoinButton->OnClicked.AddDynamic(this, &UMainMenu::OpenJoinMenu);
+	JoinButton->OnClicked.AddDynamic(this, &UMainMenu::JoinServer);
 	if (!BackButton) return false;
 	BackButton->OnClicked.AddDynamic(this, &UMainMenu::OpenMainMenu);
 	
@@ -69,6 +72,17 @@ void UMainMenu::HostServer()
 	if (MenuInterface != nullptr)
 	{
 		MenuInterface->Host();
+	}
+}
+
+void UMainMenu::JoinServer()
+{
+	if (MenuInterface != nullptr)
+	{
+		if (!IPAddressField) return;
+		const FString& IPAddress = IPAddressField->GetText().ToString();
+		
+		MenuInterface->Join(IPAddress);
 	}
 }
 
