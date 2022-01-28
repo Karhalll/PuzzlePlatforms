@@ -4,14 +4,19 @@
 #include "PuzzlePlatformsGameInstance.h"
 
 #include "Blueprint/UserWidget.h"
+#include "MenuSystem/InGameMenu.h"
 #include "MenuSystem/MainMenu.h"
+#include "MenuSystem/MenuWidget.h"
 
 UPuzzlePlatformsGameInstance::UPuzzlePlatformsGameInstance(const FObjectInitializer& ObjectInitializer)
 {
 	ConstructorHelpers::FClassFinder<UUserWidget> MenuPBClass(TEXT("/Game/MenuSystem/WBP_MainMenu"));
 	if(!ensure(MenuPBClass.Class != nullptr)) { return; }
-
 	MenuClass = MenuPBClass.Class;
+
+	ConstructorHelpers::FClassFinder<UUserWidget> InGameMenuPBClass(TEXT("/Game/MenuSystem/WBP_InGameMenu"));
+	if(!ensure(InGameMenuPBClass.Class != nullptr)) { return; }
+	InGameMenuClass = InGameMenuPBClass.Class;
 }
 
 void UPuzzlePlatformsGameInstance::Init()
@@ -27,6 +32,16 @@ void UPuzzlePlatformsGameInstance::LoadMenu()
 
 	Menu->Setup();
 	Menu->SetMenuInterface(this);
+}
+
+void UPuzzlePlatformsGameInstance::LoadInGameMenu()
+{
+	if(!InGameMenuClass) return;
+	UInGameMenu* InGameMenu = CreateWidget<UInGameMenu>(this, InGameMenuClass);
+	if(!InGameMenu) return;
+
+	InGameMenu->Setup();
+	InGameMenu->SetMenuInterface(this);
 }
 
 void UPuzzlePlatformsGameInstance::Host()

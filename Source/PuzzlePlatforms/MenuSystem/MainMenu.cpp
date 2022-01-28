@@ -24,49 +24,6 @@ bool UMainMenu::Initialize()
 	return true;
 }
 
-void UMainMenu::SetMenuInterface(IMenuInterface* MMenuInterface)
-{
-	this->MenuInterface = MMenuInterface;
-}
-
-void UMainMenu::Setup()
-{
-	this->AddToViewport();
-
-	UWorld* World = GetWorld();
-	if (!World) return;
-	
-	APlayerController* PlayerController = World->GetFirstPlayerController();
-	if(!PlayerController) return;
-
-	FInputModeUIOnly InputModeData;
-	InputModeData.SetWidgetToFocus(this->TakeWidget());
-	InputModeData.SetLockMouseToViewportBehavior(EMouseLockMode::DoNotLock);
-
-	PlayerController->SetInputMode(InputModeData);
-	PlayerController->bShowMouseCursor = true;
-}
-
-void UMainMenu::Teardown()
-{
-	UE_LOG(LogTemp, Warning, TEXT("Teardown called"));
-	
-	this->RemoveFromViewport();
-	
-	UWorld* World = GetWorld();
-	if (!World) return;
-	
-	APlayerController* PlayerController = World->GetFirstPlayerController();
-	if(!PlayerController) return;
-
-	FInputModeGameOnly InputModeData;
-	PlayerController->SetInputMode(InputModeData);
-	
-	PlayerController->bShowMouseCursor = false;
-
-	UE_LOG(LogTemp, Warning, TEXT("Teardown ended"));
-}
-
 void UMainMenu::HostServer()
 {
 	if (MenuInterface != nullptr)
