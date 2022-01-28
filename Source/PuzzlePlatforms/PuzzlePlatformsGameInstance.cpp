@@ -11,11 +11,11 @@
 UPuzzlePlatformsGameInstance::UPuzzlePlatformsGameInstance(const FObjectInitializer& ObjectInitializer)
 {
 	ConstructorHelpers::FClassFinder<UUserWidget> MenuPBClass(TEXT("/Game/MenuSystem/WBP_MainMenu"));
-	if(!ensure(MenuPBClass.Class != nullptr)) { return; }
+	if(!ensure(MenuPBClass.Class != nullptr)) return;
 	MenuClass = MenuPBClass.Class;
 
 	ConstructorHelpers::FClassFinder<UUserWidget> InGameMenuPBClass(TEXT("/Game/MenuSystem/WBP_InGameMenu"));
-	if(!ensure(InGameMenuPBClass.Class != nullptr)) { return; }
+	if(!ensure(InGameMenuPBClass.Class != nullptr)) return;
 	InGameMenuClass = InGameMenuPBClass.Class;
 }
 
@@ -77,5 +77,13 @@ void UPuzzlePlatformsGameInstance::Join(const FString& Address)
 	APlayerController* PlayerController = GetFirstLocalPlayerController();
 	if(!PlayerController) { return; }
 
-	PlayerController->ClientTravel(Address, ETravelType::TRAVEL_Absolute);
+	PlayerController->ClientTravel(Address, TRAVEL_Absolute);
+}
+
+void UPuzzlePlatformsGameInstance::LoadMainMenu()
+{
+	APlayerController* PlayerController = GetFirstLocalPlayerController();
+	if(!PlayerController) { return; }
+
+	PlayerController->ClientTravel("/Game/MenuSystem/MainMenu", TRAVEL_Absolute);
 }

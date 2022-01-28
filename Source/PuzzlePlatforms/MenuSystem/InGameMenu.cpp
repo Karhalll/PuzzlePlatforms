@@ -3,3 +3,31 @@
 
 #include "InGameMenu.h"
 
+#include "Components/Button.h"
+
+bool UInGameMenu::Initialize()
+{
+	const bool Success = Super::Initialize();
+	if (!Success) return false;
+
+	if (!CancelButton) return false;
+	CancelButton->OnClicked.AddDynamic(this, &UInGameMenu::CancelPressed);
+	if (!QuitButton) return false;
+	QuitButton->OnClicked.AddDynamic(this, &UInGameMenu::QuitPressed);
+	
+	return true;
+}
+
+void UInGameMenu::CancelPressed()
+{
+	Teardown();
+}
+
+void UInGameMenu::QuitPressed()
+{
+	if (MenuInterface != nullptr)
+	{
+		Teardown();
+		MenuInterface->LoadMainMenu();
+	}
+}
