@@ -21,15 +21,19 @@ bool UMainMenu::Initialize()
 	const bool Success = Super::Initialize();
 	if (!Success) return false;
 
-	if (!HostButton) return false;
-	HostButton->OnClicked.AddDynamic(this, &UMainMenu::HostServer);
+	if (!HostMenuButton) return false;
+	HostMenuButton->OnClicked.AddDynamic(this, &UMainMenu::OpenHostMenu);
 	if (!JoinMenuButton) return false;
 	JoinMenuButton->OnClicked.AddDynamic(this, &UMainMenu::OpenJoinMenu);
 	if (!QuitGame) return false;
 	QuitGame->OnClicked.AddDynamic(this, &UMainMenu::QuitPressed);
-	
+
+	if (!HostButton) return false;
+	HostButton->OnClicked.AddDynamic(this, &UMainMenu::HostServer);
 	if (!JoinButton) return false;
 	JoinButton->OnClicked.AddDynamic(this, &UMainMenu::JoinServer);
+	if (!BackHostButton) return false;
+	BackHostButton->OnClicked.AddDynamic(this, &UMainMenu::OpenMainMenu);
 	if (!BackButton) return false;
 	BackButton->OnClicked.AddDynamic(this, &UMainMenu::OpenMainMenu);
 	
@@ -41,7 +45,13 @@ void UMainMenu::HostServer()
 {
 	if (MenuInterface != nullptr)
 	{
-		MenuInterface->Host();
+		if (ServerHostName == nullptr)
+		{
+			MenuInterface->Host("DefaultServerName");
+		}
+
+		FString ServerName = ServerHostName->GetText().ToString();
+		MenuInterface->Host(ServerName);
 	}
 }
 
@@ -99,6 +109,13 @@ void UMainMenu::JoinServer()
 	{
 		UE_LOG(LogTemp, Warning, TEXT("Selcted index not set"));
 	}
+}
+
+void UMainMenu::OpenHostMenu()
+{
+	if (!MenuSwitcher) return;
+	if (!JoinMenu) return;
+	MenuSwitcher->SetActiveWidget(HostMenu);
 }
 
 void UMainMenu::OpenJoinMenu()
